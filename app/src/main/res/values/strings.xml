@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MovieTime</string>
     <string name="an_error_occurred">an_error_occurred</string>
+    <string name="movie_poster_desc">movie_poster_desc</string>
 </resources>

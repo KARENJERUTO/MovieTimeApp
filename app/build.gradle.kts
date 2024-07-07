@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
+//    id("io.insert-koin.android")
 }
 
 android {
@@ -65,21 +66,26 @@ dependencies {
     kapt("com.squareup.moshi:moshi-kotlin-codegen:1.12.0")
 
     // Koin
-    implementation ("io.insert-koin:koin-android:3.1.2")
-
+    implementation("io.insert-koin:koin-android:3.2.0")
+//    implementation ("io.insert-koin:koin-androidx-viewmodel:3.4.0")
 
     // Navigation
     implementation ("androidx.navigation:navigation-fragment-ktx:2.5.3")
     implementation ("androidx.navigation:navigation-ui-ktx:2.5.3")
 
+    //Material
     implementation("com.google.android.material:material:1.5.0")
+
+    //Recyclerview
     implementation("androidx.recyclerview:recyclerview:1.2.1")
 
     // Glide for image loading
     implementation("com.github.bumptech.glide:glide:4.13.0")
     kapt("com.github.bumptech.glide:compiler:4.13.0")
 
+    //Cardview
     implementation ("androidx.cardview:cardview:1.0.0")
 
+    // Picasso for image loading
     implementation ("com.squareup.picasso:picasso:2.71828")
 }

@@ -29,11 +29,11 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     inner class MovieViewHolder(private val binding: ItemMovieBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(result: Results) {
-            binding.titleTextView.text = result.title
-            binding.overviewTextView.text = result.overview
+            binding.movieTitle.text = result.title // Ensure this matches your data class property
+            binding.movieOverview.text = result.overview // Ensure this matches your data class property
             Glide.with(binding.root)
-                .load("https://image.tmdb.org/t/p/w500" + result.poster_Path)
-                .into(binding.posterImageView)
+                .load("https://image.tmdb.org/t/p/w500${result.poster_path}") // Ensure this matches your data class property
+                .into(binding.moviePoster)
         }
     }
 }
